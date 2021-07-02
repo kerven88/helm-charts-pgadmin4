@@ -7,7 +7,7 @@ replicaCount: 1
 image:
   registry: docker.io
   repository: dpage/pgadmin4
-  tag: "5.1"
+  tag: "5.4"
   pullPolicy: IfNotPresent
 
 ## Deployment annotations
@@ -228,6 +228,9 @@ extraInitContainers: |
 #         mountPath: /var/lib/pgadmin
 #     securityContext:
 #       runAsUser: 5050
+
+containerPorts:
+  http: 80
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
